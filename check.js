@@ -27,7 +27,7 @@ function formatDateEU() {
         }
 
         const authBody = await authRes.json();
-        const token = authBody.token; // odgovor iz NS portala ima {token: "..."}
+        const token = authBody.accessToken; // odgovor iz NS portala ima {token: "..."}
         
         if (!token) {
             throw new Error("Token not found in AUTH response");
